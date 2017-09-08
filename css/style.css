@@ -1,4 +1,4 @@
-body,div,ul,ol,nav{
+body,div,ul,ol,nav,p{
 	margin: 0;
 	padding: 0;
 }
@@ -294,4 +294,10 @@ ul{
 	border-radius: 1%;
 	z-index: 2;
 	text-align: center;
+}
+.anli-body{
+	box-sizing: border-box;
+	width: 83%;
+	margin-left: 7%;
+	margin-right: 10%;
 }
