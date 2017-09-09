@@ -9,7 +9,7 @@ a{
 .mynav{
 	top: 48px;
 	border: 0;
-	margin-bottom: 50px;
+	margin-bottom: 20px;
 	padding: 0;
 	background-color: #fff;
 }
@@ -32,6 +32,7 @@ ul{
 	width: 100%;
 	background: url('../img/logobg.png');
 	z-index: 100;
+	filter: invert(1);
 }
 .background-color{
 	display: none;
@@ -51,6 +52,7 @@ ul{
 	top: 25px;
 	left: 7%;
 	z-index: 100;
+	filter: invert(0.5);
 }
 .logo-bg a{
 	text-decoration: none;
