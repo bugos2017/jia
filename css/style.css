@@ -28,9 +28,9 @@ ul{
 }
 .logo-bg{
 	position: absolute;
-	height: 70px;
 	width: 100%;
 	background: url('../img/logobg.png');
+	height: 70px;
 	z-index: 100;
 	filter: invert(1);
 }
@@ -48,9 +48,9 @@ ul{
 }
 .logo-bg img{
 	position: absolute;
-	width: 10%;
+	width: 150px;
 	top: 25px;
-	left: 7%;
+	left: 80px;
 	z-index: 100;
 	filter: invert(0.5);
 }
