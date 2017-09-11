@@ -1,4 +1,10 @@
 $(function(){
+	var pages = [$(".index"),$("#aboutus"),$("#carousel-example-generic"),$("#server"),$("#anli"),$("#contact")];
+	var num = 0;
+	for (var i = pages.length - 1; i >= 0; i--) {
+		pages[i].hide();
+	}
+	pages[0].show();
 	/*$('.service-body>li').hover(function() {
 		$(this).children('button').removeClass('btn-default');
 		$(this).children('button').addClass('btn-primary');
@@ -25,32 +31,17 @@ $(function(){
 		$(this).children('div').hide();
 	});
 
-	$('.contact li:eq(1)').hover(function() {
-		$('.qrcode').css('top', ($(window).height()*0.4+76)+'px');
-		$('.qrcode').show();
-	}, function() {
-		$('.qrcode').hide();
+	$("body").bind('mousewheel', function(event,delta) {
+		pages[num].hide();
+		if (delta === -1) {
+			num = (num+1)%6;
+		} else {
+			if (num != 0){
+				num = (num-1)%6;
+			}
+		}
+		pages[num].show();
 	});
 
-	$('.contact li:eq(0)').hover(function() {
-		$(this).children('ul').show();
-	}, function() {
-		$(this).children('ul').show();
-	});
 
-	$('#myModal').on('show.bs.modal', function(event) {
-		var button = $(event.relatedTarget);
-		var num1 = button.parents('li').index();
-        var num2 = button.parents('li').index();
-        var message2 = new Array();
-		message2[0] = new Array('aaaaaaaaaaa','bbbbbbbbbbb');
-		message2[1] = new Array('aaaaaaaaaaa','bbbbbbbbbbb');
-		message2[2] = new Array('aaaaaaaaaaa','bbbbbbbbbbb');
-		message2[3] = new Array('aaaaaaaaaaa','bbbbbbbbbbb');
-		var title = button.text();
-		var modal = $(this);
-		modal.find('.modal-title').text(title);
-		modal.find('.modal-body').text(message2[num1][num2]);
-		modal.find('.modal-body').css('height', $(window).height()*0.8);
-	});
 })
