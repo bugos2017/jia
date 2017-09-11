@@ -89,15 +89,14 @@ ul{
 	right: 0;
 	top: 110px;
 	height: 100%;
-	width: 30px;
+	width: 40px;
 	z-index: 90;
 }
 .contact>li{
-	height: 30%;
+	height: 29%;
 	width: 100%;
 	border-bottom: 1px solid #fff;
 	text-align: center;
-	padding-top: 40%;
 }
 #aboutus{
 	margin-top: 100px;
