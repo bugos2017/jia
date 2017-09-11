@@ -284,6 +284,7 @@ ul{
 .anli-body{
 	box-sizing: border-box;
 	width: 83%;
+	margin-top: 200px;
 	margin-left: 7%;
 	margin-right: 10%;
 }
