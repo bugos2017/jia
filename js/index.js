@@ -1,10 +1,10 @@
 $(function(){
-	var pages = [$(".index"),$("#aboutus"),$("#carousel-example-generic"),$("#server"),$("#anli"),$("#contact")];
+	var pages = [$("#index"),$("#aboutus"),$("#carousel-example-generic"),$("#server"),$("#anli"),$("#contact")];
 	var num = 0;
 	for (var i = pages.length - 1; i >= 0; i--) {
 		pages[i].hide();
 	}
-	pages[0].show();
+	pages[0].show();   
 	/*$('.service-body>li').hover(function() {
 		$(this).children('button').removeClass('btn-default');
 		$(this).children('button').addClass('btn-primary');
@@ -32,15 +32,21 @@ $(function(){
 	});
 
 	$("body").bind('mousewheel', function(event,delta) {
-		pages[num].hide();
 		if (delta === -1) {
-			num = (num+1)%6;
+			if ($(document).scrollTop() + $(window).height() >= $(document).height()) {
+				pages[num].hide();
+				num = (num+1)%6;
+				pages[num].show();
+			}
 		} else {
-			if (num != 0){
-				num = (num-1)%6;
+			if ($(document).scrollTop() == 0) {
+				if (num != 0){
+					pages[num].hide();
+					num = (num-1)%6;
+					pages[num].show();
+				}
 			}
 		}
-		pages[num].show();
 	});
 
 
