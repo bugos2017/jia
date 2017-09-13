@@ -162,9 +162,6 @@ ul{
 .img3{
 	display: none;
 }
-.img4{
-	display: none;
-}
 .service-img1-01{
 	background: url('../img/img1/img1-01.gif');
 }
@@ -237,30 +234,6 @@ ul{
 .service-img3-08{
 	background: url('../img/img3/img3-08.gif');
 }
-.service-img4-01{
-	background: url('../img/img4/img4-01.gif');
-}
-.service-img4-02{
-	background: url('../img/img4/img4-02.gif');
-}
-.service-img4-03{
-	background: url('../img/img4/img4-03.gif');
-}
-.service-img4-04{
-	background: url('../img/img4/img4-04.gif');
-}
-.service-img4-05{
-	background: url('../img/img4/img4-05.gif');
-}
-.service-img4-06{
-	background: url('../img/img4/img4-06.gif');
-}
-.service-img4-07{
-	background: url('../img/img4/img4-07.gif');
-}
-.service-img4-08{
-	background: url('../img/img4/img4-08.gif');
-}
 .service-body>li>ul>li{
 	cursor: pointer;
 	display: block;
@@ -287,4 +260,27 @@ ul{
 	margin-top: 200px;
 	margin-left: 7%;
 	margin-right: 10%;
+}
+.whitepoint {
+	position: fixed;
+	right: 55px;
+	width: 12px;
+	height: 120px;
+	top: 45%;
+	z-index: 100;
+}
+.whitepoint>li {
+	width: 7px;
+	height: 7px;
+	margin: 0 auto;
+	margin-bottom: 13px;
+	background-image: url('../img/smallpoint.png');
+	cursor: pointer;
+}
+.bigpoint {
+	margin: 0 0 13px 0 !important;
+	height: 12px !important;
+	width: 12px !important;
+	background-image: url('../img/bigpoint.png') !important;
+
 }

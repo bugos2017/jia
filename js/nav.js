@@ -20,11 +20,34 @@ $(function(){
 		selected.addClass('nav-active');
 		$(this).filter('a').css('color', '#000');
 	});*/
-	$('nav ul li a').hover(function() {
+	// $('nav ul li a').hover(function() {
+	// 	selected.removeClass('nav-active');
+	// 	$(this).parents('li').addClass('nav-active');
+	// }, function() {
+	// 	$(this).parents('li').removeClass('nav-active');
+	// 	selected.addClass('nav-active');
+	// });
+
+	function navshow(num) {
 		selected.removeClass('nav-active');
-		$(this).parents('li').addClass('nav-active');
-	}, function() {
-		$(this).parents('li').removeClass('nav-active');
-		selected.addClass('nav-active');
-	});
+		switch (num) {
+			case 2:
+			case 3:
+			case 4: 
+				$(".realnav>li:eq(3)").addClass('nav-active');
+				break;
+			case 0:
+				$(".realnav>li:eq(1)").addClass('nav-active');
+				break;
+			case 1:
+				$(".realnav>li:eq(2)").addClass('nav-active');
+				break;
+			case 5:
+				$(".realnav>li:eq(4)").addClass('nav-active');
+				break;
+			default:
+				break;
+
+		}
+	}
 })

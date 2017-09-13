@@ -4,7 +4,8 @@ $(function(){
 	for (var i = pages.length - 1; i >= 0; i--) {
 		pages[i].hide();
 	}
-	pages[0].show();   
+	pages[0].show();
+	$(".whitepoint>li:eq(0)").addClass('bigpoint');   
 	/*$('.service-body>li').hover(function() {
 		$(this).children('button').removeClass('btn-default');
 		$(this).children('button').addClass('btn-primary');
@@ -34,18 +35,126 @@ $(function(){
 	$("body").bind('mousewheel', function(event,delta) {
 		if (delta === -1) {
 			if ($(document).scrollTop() + $(window).height() >= $(document).height()) {
-				pages[num].hide();
+				pages[num].hide("slow","linear");
 				num = (num+1)%6;
-				pages[num].show();
+				pages[num].show("slow","linear");
 			}
 		} else {
 			if ($(document).scrollTop() == 0) {
 				if (num != 0){
-					pages[num].hide();
+					pages[num].hide("slow","linear");
 					num = (num-1)%6;
-					pages[num].show();
+					pages[num].show("slow","linear");
 				}
 			}
+		}
+		$('nav ul li').filter('.nav-active').removeClass('nav-active');
+		$(".whitepoint>li").removeClass('bigpoint');
+		switch (num) {
+			case 2:
+			case 3:
+			case 4:
+				$("nav ul li:eq(3)").addClass('nav-active');
+				$(".whitepoint>li:eq(2)").addClass('bigpoint');
+				break;
+			case 0:
+				$("nav ul li:eq(1)").addClass('nav-active');
+				$(".whitepoint>li:eq(0)").addClass('bigpoint');
+				break;
+			case 1:
+				$("nav ul li:eq(2)").addClass('nav-active');
+				$(".whitepoint>li:eq(1)").addClass('bigpoint');
+				break;
+			case 5:
+				$("nav ul li:eq(4)").addClass('nav-active');
+				$(".whitepoint>li:eq(3)").addClass('bigpoint');
+				break;
+			default:
+				break;
+		}
+	});
+
+	$("nav ul li a").click(function() {
+		$('nav ul li').filter('.nav-active').removeClass('nav-active');
+		$(".whitepoint>li").removeClass('bigpoint');
+		switch ($(this).parent("li").index()) {
+			case 3: 
+				$(this).parents('li').addClass('nav-active');
+				for (var i = pages.length - 1; i >= 0; i--) {
+					pages[i].hide();
+				}
+				pages[2].show('slow');
+				$(".whitepoint>li:eq(2)").addClass('bigpoint');
+				break;
+			case 1:
+				$(this).parents('li').addClass('nav-active');
+				for (var i = pages.length - 1; i >= 0; i--) {
+					pages[i].hide();
+				}
+				pages[0].show('slow');
+				$(".whitepoint>li:eq(0)").addClass('bigpoint');
+				break;
+			case 2:
+				$(this).parents('li').addClass('nav-active');
+				for (var i = pages.length - 1; i >= 0; i--) {
+					pages[i].hide();
+				}
+				pages[1].show('slow');
+				$(".whitepoint>li:eq(1)").addClass('bigpoint');
+				break;
+			case 4:
+				$(this).parents('li').addClass('nav-active');
+				for (var i = pages.length - 1; i >= 0; i--) {
+					pages[i].hide();
+				}
+				pages[5].show('slow');
+				$(".whitepoint>li:eq(3)").addClass('bigpoint');
+				break;
+			default:
+				break;
+
+		}
+	});
+
+	$(".whitepoint>li").click(function(event) {
+		$('nav ul li').filter('.nav-active').removeClass('nav-active');
+		$(".whitepoint>li").removeClass('bigpoint');
+		switch ($(this).index()) {
+			case 2: 
+				$("nav ul li:eq(3)").addClass('nav-active');
+				for (var i = pages.length - 1; i >= 0; i--) {
+					pages[i].hide();
+				}
+				pages[2].show('slow');
+				$(".whitepoint>li:eq(2)").addClass('bigpoint');
+				break;
+			case 0:
+				$("nav ul li:eq(1)").addClass('nav-active');
+				for (var i = pages.length - 1; i >= 0; i--) {
+					pages[i].hide();
+				}
+				pages[0].show('slow');
+				$(".whitepoint>li:eq(0)").addClass('bigpoint');
+				break;
+			case 1:
+				$("nav ul li:eq(2)").addClass('nav-active');
+				for (var i = pages.length - 1; i >= 0; i--) {
+					pages[i].hide();
+				}
+				pages[1].show('slow');
+				$(".whitepoint>li:eq(1)").addClass('bigpoint');
+				break;
+			case 3:
+				$("nav ul li:eq(4)").addClass('nav-active');
+				for (var i = pages.length - 1; i >= 0; i--) {
+					pages[i].hide();
+				}
+				pages[5].show('slow');
+				$(".whitepoint>li:eq(3)").addClass('bigpoint');
+				break;
+			default:
+				break;
+
 		}
 	});
 
