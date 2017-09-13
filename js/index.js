@@ -33,7 +33,7 @@ $(function(){
 	});
 
 	$("body").bind('mousewheel', function(event,delta) {
-		if (delta === -1) {
+		if (delta == -1) {
 			if ($(document).scrollTop() + $(window).height() >= $(document).height()) {
 				pages[num].hide("slow","linear");
 				num = (num+1)%6;
