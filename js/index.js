@@ -35,16 +35,17 @@ $(function(){
 	$("body").bind('mousewheel', function(event,delta) {
 		if (delta == -1) {
 			if ($(document).scrollTop() + $(window).height() >= $(document).height()) {
-				pages[num].hide("slow","linear");
+				pages[num].hide();
 				num = (num+1)%6;
-				pages[num].show("slow","linear");
+				pages[num].show();
+			//	pages[num].show("slow","linear");
 			}
 		} else {
 			if ($(document).scrollTop() == 0) {
 				if (num != 0){
-					pages[num].hide("slow","linear");
+					pages[num].hide();
 					num = (num-1)%6;
-					pages[num].show("slow","linear");
+					pages[num].show();
 				}
 			}
 		}
