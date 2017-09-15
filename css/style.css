@@ -101,10 +101,8 @@ ul{
 #aboutus{
 	margin-top: 100px;
 	margin-bottom: 100px;
-}
-.abooutimg{
-	
-	
+	background-image: url('../img/about.png');
+	height:613px;
 }
 .abouttext{
 	
