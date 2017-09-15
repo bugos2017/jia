@@ -83,6 +83,9 @@ ul{
 	top: -27px;
 	margin-bottom: 20px;
 }
+#index{
+	overflow:hidden;
+}
 .contact{
 	position: fixed;
 	background-image: url('../img/rightnavbg.png');
@@ -97,26 +100,50 @@ ul{
 	width: 100%;
 	border-bottom: 1px solid #fff;
 	text-align: center;
+	
+	display: flex;
+    align-items: center; /*定义li的元素垂直居中*/
+    justify-content: center; /*定义li的里的元素水平居中*/
 }
+/*.contact>li>div{
+	padding-top: 20%;
+	padding-bottom:20%;
+}*/
 #aboutus{
 	margin-top: 100px;
-	margin-bottom: 100px;
+	/*margin-bottom: 100px;*/
 	background-image: url('../img/about.png');
 	height:613px;
+	overflow:hide;
 }
-.abouttext{
+.abouttext1{
+	padding-top:15%;
+	margin-left:60%;
 	
 }
-.aboutus-title{
+.abouttext1-title{
 	margin-left: 10%;
 	margin-bottom: 20px;
 }
-.aboutus-message{
-	margin-left: 15%;
+.abouttext1-message{
+	margin-left: 10%;
 	margin-bottom: 20px;
 }
-.aboutus-descri{
-	margin-left: 10%;
+.abouttext2{
+	margin-top:15%;
+	margin-left:10%;
+	margin-right:10%;
+	
+}
+.abouttext2-descri{
+
+	margin-left:;
+}
+#carousel-example-generic{
+		margin-top: 100px;
+}
+#server{
+	margin-top: 100px;
 }
 .service-head{
 	width: 100%;
@@ -125,7 +152,6 @@ ul{
 	font-size: 22px;
 	font-family: 黑体;
 	margin-top: 30px;
-	margin-bottom: 20px;
 }
 .service-body{
 	box-sizing: border-box;

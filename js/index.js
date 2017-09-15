@@ -34,18 +34,18 @@ $(function(){
 
 	$("body").bind('mousewheel', function(event,delta) {
 		if (delta == -1) {
-			if ($(document).scrollTop() + $(window).height() >= $(document).height()) {
-				pages[num].hide();
+			if ($(document).scrollTop() + $(window).height()+1 >= $(document).height()) {
+				pages[num].slideUp(700);
 				num = (num+1)%6;
-				pages[num].show();
+				pages[num].slideDown(700);
 			//	pages[num].show("slow","linear");
 			}
 		} else {
 			if ($(document).scrollTop() == 0) {
 				if (num != 0){
-					pages[num].hide();
+					pages[num].slideUp(700);
 					num = (num-1)%6;
-					pages[num].show();
+					pages[num].slideDown(700);
 				}
 			}
 		}
@@ -84,7 +84,7 @@ $(function(){
 				for (var i = pages.length - 1; i >= 0; i--) {
 					pages[i].hide();
 				}
-				pages[2].show('slow');
+				pages[2].show();
 				$(".whitepoint>li:eq(2)").addClass('bigpoint');
 				break;
 			case 1:
@@ -92,7 +92,7 @@ $(function(){
 				for (var i = pages.length - 1; i >= 0; i--) {
 					pages[i].hide();
 				}
-				pages[0].show('slow');
+				pages[0].show();
 				$(".whitepoint>li:eq(0)").addClass('bigpoint');
 				break;
 			case 2:
@@ -100,7 +100,7 @@ $(function(){
 				for (var i = pages.length - 1; i >= 0; i--) {
 					pages[i].hide();
 				}
-				pages[1].show('slow');
+				pages[1].show();
 				$(".whitepoint>li:eq(1)").addClass('bigpoint');
 				break;
 			case 4:
@@ -108,7 +108,7 @@ $(function(){
 				for (var i = pages.length - 1; i >= 0; i--) {
 					pages[i].hide();
 				}
-				pages[5].show('slow');
+				pages[5].show();
 				$(".whitepoint>li:eq(3)").addClass('bigpoint');
 				break;
 			default:
@@ -126,7 +126,7 @@ $(function(){
 				for (var i = pages.length - 1; i >= 0; i--) {
 					pages[i].hide();
 				}
-				pages[2].show('slow');
+				pages[2].show();
 				$(".whitepoint>li:eq(2)").addClass('bigpoint');
 				break;
 			case 0:
@@ -134,7 +134,7 @@ $(function(){
 				for (var i = pages.length - 1; i >= 0; i--) {
 					pages[i].hide();
 				}
-				pages[0].show('slow');
+				pages[0].show();
 				$(".whitepoint>li:eq(0)").addClass('bigpoint');
 				break;
 			case 1:
@@ -142,7 +142,7 @@ $(function(){
 				for (var i = pages.length - 1; i >= 0; i--) {
 					pages[i].hide();
 				}
-				pages[1].show('slow');
+				pages[1].show();
 				$(".whitepoint>li:eq(1)").addClass('bigpoint');
 				break;
 			case 3:
@@ -150,7 +150,7 @@ $(function(){
 				for (var i = pages.length - 1; i >= 0; i--) {
 					pages[i].hide();
 				}
-				pages[5].show('slow');
+				pages[5].show();
 				$(".whitepoint>li:eq(3)").addClass('bigpoint');
 				break;
 			default:
