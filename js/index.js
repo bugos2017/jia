@@ -35,17 +35,17 @@ $(function(){
 	$("body").bind('mousewheel', function(event,delta) {
 		if (delta == -1) {
 			if ($(document).scrollTop() + $(window).height()+1 >= $(document).height()) {
-				pages[num].slideUp(700);
+				pages[num].slideUp(1000);
 				num = (num+1)%6;
-				pages[num].slideDown(700);
+				pages[num].slideDown(1000);
 			//	pages[num].show("slow","linear");
 			}
 		} else {
 			if ($(document).scrollTop() == 0) {
 				if (num != 0){
-					pages[num].slideUp(700);
+					pages[num].slideUp(1000);
 					num = (num-1)%6;
-					pages[num].slideDown(700);
+					pages[num].slideDown(1000);
 				}
 			}
 		}
