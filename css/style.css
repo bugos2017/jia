@@ -77,10 +77,11 @@ ul{
 	line-height: 30px;
 }
 .nav-border{
+	position: relative;
 	width: 100%;
 	height: 8px;
 	background-image: url('../img/logoborder.png');
-	top: -27px;
+	top: 110px;
 	margin-bottom: 20px;
 }
 #index{
