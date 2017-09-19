@@ -2,9 +2,9 @@ $(function(){
 	var pages = [$("#index"),$("#aboutus"),$("#carousel-example-generic"),$("#server"),$("#anli"),$("#contact")];
 	var num = 0;
 	for (var i = pages.length - 1; i >= 0; i--) {
-		pages[i].hide();
+		pages[i].stop().hide();
 	}
-	pages[0].show();
+	pages[0].stop().show();
 	$(".whitepoint>li:eq(0)").addClass('bigpoint');   
 	/*$('.service-body>li').hover(function() {
 		$(this).children('button').removeClass('btn-default');
@@ -21,15 +21,15 @@ $(function(){
 		old.removeClass('btn-primary');
 		old.addClass('btn-default');
 		$(this).addClass('btn-primary');
-		$('.img'+(oldnum+1)).hide();
-		$('.img'+(num+1)).show();
+		$('.img'+(oldnum+1)).stop().hide();
+		$('.img'+(num+1)).stop().show();
 	});
 
 
 	$('.service-img li').hover(function() {
-		$(this).children('div').show();
+		$(this).children('div').stop().show();
 	}, function() {
-		$(this).children('div').hide();
+		$(this).children('div').stop().hide();
 	});
 
 	$("body").bind('mousewheel', function(event,delta) {
@@ -82,33 +82,33 @@ $(function(){
 			case 3: 
 				$(this).parents('li').addClass('nav-active');
 				for (var i = pages.length - 1; i >= 0; i--) {
-					pages[i].hide();
+					pages[i].stop().hide();
 				}
-				pages[2].show();
+				pages[2].stop().show();
 				$(".whitepoint>li:eq(2)").addClass('bigpoint');
 				break;
 			case 1:
 				$(this).parents('li').addClass('nav-active');
 				for (var i = pages.length - 1; i >= 0; i--) {
-					pages[i].hide();
+					pages[i].stop().hide();
 				}
-				pages[0].show();
+				pages[0].stop().show();
 				$(".whitepoint>li:eq(0)").addClass('bigpoint');
 				break;
 			case 2:
 				$(this).parents('li').addClass('nav-active');
 				for (var i = pages.length - 1; i >= 0; i--) {
-					pages[i].hide();
+					pages[i].stop().hide();
 				}
-				pages[1].show();
+				pages[1].stop().show();
 				$(".whitepoint>li:eq(1)").addClass('bigpoint');
 				break;
 			case 4:
 				$(this).parents('li').addClass('nav-active');
 				for (var i = pages.length - 1; i >= 0; i--) {
-					pages[i].hide();
+					pages[i].stop().hide();
 				}
-				pages[5].show();
+				pages[5].stop().show();
 				$(".whitepoint>li:eq(3)").addClass('bigpoint');
 				break;
 			default:
@@ -124,33 +124,33 @@ $(function(){
 			case 2: 
 				$("nav ul li:eq(3)").addClass('nav-active');
 				for (var i = pages.length - 1; i >= 0; i--) {
-					pages[i].hide();
+					pages[i].stop().hide();
 				}
-				pages[2].show();
+				pages[2].stop().show();
 				$(".whitepoint>li:eq(2)").addClass('bigpoint');
 				break;
 			case 0:
 				$("nav ul li:eq(1)").addClass('nav-active');
 				for (var i = pages.length - 1; i >= 0; i--) {
-					pages[i].hide();
+					pages[i].stop().hide();
 				}
-				pages[0].show();
+				pages[0].stop().show();
 				$(".whitepoint>li:eq(0)").addClass('bigpoint');
 				break;
 			case 1:
 				$("nav ul li:eq(2)").addClass('nav-active');
 				for (var i = pages.length - 1; i >= 0; i--) {
-					pages[i].hide();
+					pages[i].stop().hide();
 				}
-				pages[1].show();
+				pages[1].stop().show();
 				$(".whitepoint>li:eq(1)").addClass('bigpoint');
 				break;
 			case 3:
 				$("nav ul li:eq(4)").addClass('nav-active');
 				for (var i = pages.length - 1; i >= 0; i--) {
-					pages[i].hide();
+					pages[i].stop().hide();
 				}
-				pages[5].show();
+				pages[5].stop().show();
 				$(".whitepoint>li:eq(3)").addClass('bigpoint');
 				break;
 			default:

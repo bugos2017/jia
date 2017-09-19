@@ -87,7 +87,7 @@
       <li>
 		<div>
         <p style="background-image: url(img/wechat.png);width: 30px; height: 25px;text-align: center;margin:auto;"></p>
-        <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=961791953&site=qq&menu=yes" style="color: #fff;font: 14 微软雅黑;">在<br>线<br>客<br>服</a>
+        <a style="color: #fff;font: 14 微软雅黑; cursor: pointer;" data-toggle="modal" data-target="#qrcode">在<br>线<br>客<br>服</a>
 		</div>
       </li>
       <li>
@@ -323,7 +323,7 @@
           <p style="font-size: 18px; font-family: 微软雅黑;">您可以通过以下方式联系到我们</p>
           <p style="font-size: 18px; font-family: 微软雅黑; margin-bottom: 20px;">我们期待您的莅临</p>
           <p style="font-size: 18px; font-family: 微软雅黑;">电话 / 020-34487176</p>
-          <p style="font-size: 18px; font-family: 微软雅黑;"> Q / 37189 7238</p>
+          <p style="font-size: 18px; font-family: 微软雅黑;"> QQ / 37189 7238</p>
           <p style="font-size: 18px; font-family: 微软雅黑; margin-bottom: 20px;">手机/微信 / 133 0220 4001</p>
           <p style="font-size: 18px; font-family: 微软雅黑;">邮箱 /</p>
           <p style="font-size: 18px; font-family: 微软雅黑; margin-bottom: 20px;">网址 /</p>
@@ -336,6 +336,24 @@
         </li>
       </ul>
     </div>
+
+    <!--模态框二维码-->
+    <div class="modal fade" id="qrcode" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">微信客服</h4>
+          </div>
+          <div class="modal-body">
+            <img src="img/cli_1000px.png" class="img-responsive" alt="Responsive image" >
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
 
 
 

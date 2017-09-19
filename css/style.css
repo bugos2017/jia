@@ -153,7 +153,7 @@ ul{
 		margin-top: 100px;
 }
 #server{
-	margin-top: 100px;
+	margin-top: 120px;
 }
 .service-head{
 	width: 100%;
@@ -161,7 +161,6 @@ ul{
 	text-align: center;
 	font-size: 22px;
 	font-family: 黑体;
-	margin-top: 30px;
 }
 .service-body{
 	box-sizing: border-box;
