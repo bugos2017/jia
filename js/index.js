@@ -5,6 +5,11 @@ $(function(){
 		pages[i].stop().hide();
 	}
 	pages[0].stop().show();
+	var flag = 0;
+	setInterval(function () {
+		flag = 1;
+	}, 2000);
+
 	$(".whitepoint>li:eq(0)").addClass('bigpoint');   
 	/*$('.service-body>li').hover(function() {
 		$(this).children('button').removeClass('btn-default');
@@ -35,44 +40,51 @@ $(function(){
 	$("body").bind('mousewheel', function(event,delta) {
 		if (delta == -1) {
 			if ($(document).scrollTop() + $(window).height()+1 >= $(document).height()) {
-				pages[num].slideUp(1000);
-				num = (num+1)%6;
-				pages[num].slideDown(1000);
-			//	pages[num].show("slow","linear");
+				if (flag == 1) {
+					pages[num].slideUp(1000);
+					num = (num+1)%6;
+					pages[num].slideDown(1000);
+					flag = 0;
+				}
 			}
 		} else {
 			if ($(document).scrollTop() == 0) {
 				if (num != 0){
-					pages[num].slideUp(1000);
-					num = (num-1)%6;
-					pages[num].slideDown(1000);
+					if (flag == 1) {
+						pages[num].slideUp(1000);
+						num = (num-1)%6;
+						pages[num].slideDown(1000);
+						flag = 0;
+					}
 				}
 			}
 		}
-		$('nav ul li').filter('.nav-active').removeClass('nav-active');
-		$(".whitepoint>li").removeClass('bigpoint');
-		switch (num) {
-			case 2:
-			case 3:
-			case 4:
-				$("nav ul li:eq(3)").addClass('nav-active');
-				$(".whitepoint>li:eq(2)").addClass('bigpoint');
-				break;
-			case 0:
-				$("nav ul li:eq(1)").addClass('nav-active');
-				$(".whitepoint>li:eq(0)").addClass('bigpoint');
-				break;
-			case 1:
-				$("nav ul li:eq(2)").addClass('nav-active');
-				$(".whitepoint>li:eq(1)").addClass('bigpoint');
-				break;
-			case 5:
-				$("nav ul li:eq(4)").addClass('nav-active');
-				$(".whitepoint>li:eq(3)").addClass('bigpoint');
-				break;
-			default:
-				break;
-		}
+		//if (flag == 1) {
+			$('nav ul li').filter('.nav-active').removeClass('nav-active');
+			$(".whitepoint>li").removeClass('bigpoint');
+			switch (num) {
+				case 2:
+				case 3:
+				case 4:
+					$("nav ul li:eq(3)").addClass('nav-active');
+					$(".whitepoint>li:eq(2)").addClass('bigpoint');
+					break;
+				case 0:
+					$("nav ul li:eq(1)").addClass('nav-active');
+					$(".whitepoint>li:eq(0)").addClass('bigpoint');
+					break;
+				case 1:
+					$("nav ul li:eq(2)").addClass('nav-active');
+					$(".whitepoint>li:eq(1)").addClass('bigpoint');
+					break;
+				case 5:
+					$("nav ul li:eq(4)").addClass('nav-active');
+					$(".whitepoint>li:eq(3)").addClass('bigpoint');
+					break;
+				default:
+					break;
+			}
+		//}
 	});
 
 	$("nav ul li a").click(function() {
