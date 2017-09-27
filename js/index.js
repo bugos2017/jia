@@ -9,7 +9,6 @@ $(function(){
 	setInterval(function () {
 		flag = 1;
 	}, 2000);
-	hideNav();
 
 	$(".whitepoint>li:eq(0)").addClass('bigpoint');   
 	/*$('.service-body>li').hover(function() {
@@ -67,22 +66,18 @@ $(function(){
 				case 2:
 				case 3:
 				case 4:
-					num = 2;
 					$("nav ul li:eq(3)").addClass('nav-active');
 					$(".whitepoint>li:eq(2)").addClass('bigpoint');
 					break;
 				case 0:
-					nam = 0;
 					$("nav ul li:eq(1)").addClass('nav-active');
 					$(".whitepoint>li:eq(0)").addClass('bigpoint');
 					break;
 				case 1:
-					num = 1;
 					$("nav ul li:eq(2)").addClass('nav-active');
 					$(".whitepoint>li:eq(1)").addClass('bigpoint');
 					break;
 				case 5:
-					num = 5;
 					$("nav ul li:eq(4)").addClass('nav-active');
 					$(".whitepoint>li:eq(3)").addClass('bigpoint');
 					break;
@@ -90,7 +85,6 @@ $(function(){
 					break;
 			}
 		//}
-		hideNav();
 	});
 
 	$("nav ul li a").click(function() {
@@ -98,7 +92,6 @@ $(function(){
 		$(".whitepoint>li").removeClass('bigpoint');
 		switch ($(this).parent("li").index()) {
 			case 3: 
-				num = 2;
 				$(this).parents('li').addClass('nav-active');
 				for (var i = pages.length - 1; i >= 0; i--) {
 					pages[i].stop().hide();
@@ -107,7 +100,6 @@ $(function(){
 				$(".whitepoint>li:eq(2)").addClass('bigpoint');
 				break;
 			case 1:
-				num = 0;
 				$(this).parents('li').addClass('nav-active');
 				for (var i = pages.length - 1; i >= 0; i--) {
 					pages[i].stop().hide();
@@ -116,7 +108,6 @@ $(function(){
 				$(".whitepoint>li:eq(0)").addClass('bigpoint');
 				break;
 			case 2:
-				num = 1;
 				$(this).parents('li').addClass('nav-active');
 				for (var i = pages.length - 1; i >= 0; i--) {
 					pages[i].stop().hide();
@@ -125,7 +116,6 @@ $(function(){
 				$(".whitepoint>li:eq(1)").addClass('bigpoint');
 				break;
 			case 4:
-				num = 5;
 				$(this).parents('li').addClass('nav-active');
 				for (var i = pages.length - 1; i >= 0; i--) {
 					pages[i].stop().hide();
@@ -137,7 +127,6 @@ $(function(){
 				break;
 
 		}
-		hideNav();
 	});
 
 	$(".whitepoint>li").click(function(event) {
@@ -180,29 +169,7 @@ $(function(){
 				break;
 
 		}
-		hideNav();
 	});
-
-
-	function debounce(fn, delay){
-	  var timer = null; // 声明计时器
-	  return function(){
-	    var context = this;
-	    var args = arguments;
-	    clearTimeout(timer);
-	    timer = setTimeout(function(){
-	      fn.apply(context, args);
-	    }, delay);
-	  };
-	}
-
-	function hideNav() {
-		if (num == 0) {
-			$(".logo-bg").css('background', 'rgba(0,0,0,0)');
-		} else {
-			$(".logo-bg").css('background', '');
-		}
-	}
 
 
 })
