@@ -67,22 +67,18 @@ $(function(){
 				case 2:
 				case 3:
 				case 4:
-					num = 2;
 					$("nav ul li:eq(3)").addClass('nav-active');
 					$(".whitepoint>li:eq(2)").addClass('bigpoint');
 					break;
 				case 0:
-					nam = 0;
 					$("nav ul li:eq(1)").addClass('nav-active');
 					$(".whitepoint>li:eq(0)").addClass('bigpoint');
 					break;
 				case 1:
-					num = 1;
 					$("nav ul li:eq(2)").addClass('nav-active');
 					$(".whitepoint>li:eq(1)").addClass('bigpoint');
 					break;
 				case 5:
-					num = 5;
 					$("nav ul li:eq(4)").addClass('nav-active');
 					$(".whitepoint>li:eq(3)").addClass('bigpoint');
 					break;
