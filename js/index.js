@@ -195,8 +195,11 @@ $(function(){
 	function hideNav() {
 		if (num == 0) {
 			$(".logo-bg").css('background', 'rgba(0,0,0,0)');
+			$(".mynav").css('background', 'rgba(0,0,0,0)');
+			$(".realnav>li:eq(1)").removeClass('nav-active');
 		} else {
-			$(".logo-bg").css('background', '');
+			$(".logo-bg").css('<b></b>ackground', '');
+			$(".mynav").css('background', '');
 		}
 	}
 
