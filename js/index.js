@@ -198,7 +198,7 @@ $(function(){
 			$(".mynav").css('background', 'rgba(0,0,0,0)');
 			$(".realnav>li:eq(1)").removeClass('nav-active');
 		} else {
-			$(".logo-bg").css('<b></b>ackground', '');
+			$(".logo-bg").css('background', '');
 			$(".mynav").css('background', '');
 		}
 	}
