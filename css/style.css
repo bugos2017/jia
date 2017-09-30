@@ -322,3 +322,10 @@ ul{
 	background-image: url('../img/bigpoint.png') !important;
 
 }
+.contact-body{
+	box-sizing: border-box;
+    width: 77%;
+    padding-top: 150px;
+    margin-left: 10%;
+    margin-right: 13%;
+}
