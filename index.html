@@ -80,21 +80,22 @@
     <!--右侧导航栏-->
     <ul class="contact">
       <li>
-		<div >
-        <p style="background-image: url(img/QQ.png);width: 19px; height: 19px;text-align: center;margin:auto;"></p>
-        <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=961791953&site=qq&menu=yes" style="color: #fff;font: 14 微软雅黑;">在<br>线<br>客<br>服</a>
+        <div>
+          <p style="background-image: url(img/QQ.png);width: 19px; height: 19px;text-align: center;margin:auto;"></p>
+          <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=961791953&site=qq&menu=yes" style="color: #fff;font: 14 微软雅黑;">在<br>线<br>客<br>服</a>
+        </div>
       </li>
       <li>
-		<div>
-        <p style="background-image: url(img/wechat.png);width: 30px; height: 25px;text-align: center;margin:auto;"></p>
-        <a style="color: #fff;font: 14 微软雅黑; cursor: pointer;" data-toggle="modal" data-target="#qrcode">在<br>线<br>客<br>服</a>
-		</div>
+		    <div>
+          <p style="background-image: url(img/wechat.png);width: 30px; height: 25px;text-align: center;margin:auto;"></p>
+          <a style="color: #fff;font: 14 微软雅黑; cursor: pointer;" data-toggle="modal" data-target="#qrcode">在<br>线<br>客<br>服</a>
+		    </div>
       </li>
       <li>
-		<div>
-        <div style="width: 25px; height: 25px;background-image: url(img/rightnavicon.png); margin:auto;"></div>
-        <div style="width: 25px; height: 25px;background-image: url(img/rightnavicon.png); margin:auto;background-position: 0 25px;"></div>
-		</div>
+    		<div>
+          <div style="width: 25px; height: 25px;background-image: url(img/rightnavicon.png); margin:auto; cursor: pointer;" data-toggle="modal" data-target="#contact-modal"></div>
+          <div style="width: 25px; height: 25px;background: url(img/Go_Top.ico) no-repeat; margin:auto; filter: invert(1); cursor: pointer;"></div>
+    		</div>
       </li>
     </ul>
 
@@ -116,31 +117,24 @@
         <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
         <li data-target="#carousel-example-generic" data-slide-to="1"></li>
         <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
       </ol>
 
       <!-- Wrapper for slides -->
       <div class="carousel-inner" role="listbox">
         <div class="item active">
-          <img src="img/top-2-01.jpg" alt="...">
+          <img src="img/carousel1.png" alt="...">
           <div class="carousel-caption">
             ...
           </div>
         </div>
         <div class="item">
-          <img src="img/top-2-02-01.jpg" alt="...">
+          <img src="img/carousel2.png" alt="...">
           <div class="carousel-caption">
             ...
           </div>
         </div>
         <div class="item">
-          <img src="img/top-2-03-01-01.jpg" alt="...">
-          <div class="carousel-caption">
-            ...
-          </div>
-        </div>
-        <div class="item">
-          <img src="img/top-2-03-01.jpg" alt="...">
+          <img src="img/carousel3.png" alt="...">
           <div class="carousel-caption">
             ...
           </div>
@@ -169,17 +163,17 @@
 
       <ul class="service-body row">
         <li class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
-          <button type="button" class="btn btn-primary btn-lg">
+          <button type="button" class="btn btn-default btn-lg" style="background-color: rgba(0,0,0,0.5);">
             <img src="img/edit.png" height="36px" alt=""> \印刷制品
           </button>
         </li>
         <li class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
-          <button type="button" class="btn btn-default btn-lg">
+          <button type="button" class="btn btn-lg">
             <img src="img/bulbs.png" height="36px" alt=""> \视觉设计
           </button>
         </li>
         <li class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
-          <button type="button" class="btn btn-default btn-lg">
+          <button type="button" class="btn btn-lg">
             <img src="img/earth.png" height="36px" alt=""> \互联网产品开发
           </button>
         </li>
@@ -393,6 +387,24 @@
           </div>
           <div class="modal-body">
             <img src="img/cli_1000px.png" class="img-responsive" alt="Responsive image" >
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <!--模态框电话-->
+    <div class="modal fade" id="contact-modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">联系方式</h4>
+          </div>
+          <div class="modal-body">
+            手机/微信 / 133 0220 4001
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
