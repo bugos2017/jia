@@ -1,9 +1,23 @@
+var num = 0;
+function liandong(number) {
+	$("#carousel-example-generic").stop().hide();
+	$("#server").stop().show();
+	num = 3;
+	var old = $('.service-body>li button').filter('.btn-default');
+	var oldnum = old.parents('li').index();
+	old.removeClass('btn-default');
+	old.css('background', '');
+	$('.service-body>li:eq('+number+') button').addClass('btn-default');
+	$('.service-body>li:eq('+number+') button').css('background', 'rgba(0,0,0,0.5)');
+	$('.img'+(oldnum+1)).stop().hide();
+	$('.img'+(number+1)).stop().show();
+}
 $(function(){
 	var pages = [$("#index"),$("#aboutus"),$("#carousel-example-generic"),$("#server"),$("#anli"),$("#contact")];
-	var num = 0;
 	for (var i = pages.length - 1; i >= 0; i--) {
 		pages[i].stop().hide();
 	}
+	alert(num);
 	pages[0].stop().show();
 	var flag = 0;
 	setInterval(function () {
@@ -25,6 +39,7 @@ $(function(){
 		$(this).children('button').removeClass('btn-primary');
 		$(this).children('button').addClass('btn-default');
 	});*/
+	
 	$('.service-img li').addClass('col-md-3 col-lg-3 col-sm-6 col-xs-6');
 	$('.service-body>li>button').click(function(event) {
 		var old = $('.service-body>li button').filter('.btn-default');
