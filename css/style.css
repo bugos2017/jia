@@ -25,7 +25,7 @@ ul{
 	float: right;
 }
 .float-left{
-	float: left
+	float: left;
 }
 .logo-bg{
 	position: fixed;
@@ -105,22 +105,22 @@ ul{
 	width: 100%;
 	border-bottom: 1px solid #fff;
 	text-align: center;
-	
 	display: flex;
     align-items: center; /*定义li的元素垂直居中*/
     justify-content: center; /*定义li的里的元素水平居中*/
 }
-#aboutus{
+.aboutus{
 	padding-top: 120px; 
 	background: url('../img/about.png') no-repeat;
 	overflow:hide;
+}
+.test {
+	background: url('../img/about1.png') no-repeat;
 }
 .abouttext1{
 	padding-top:15%;
 	margin-left:60%;
 	color:#FFF;
-	
-	
 }
 .abouttext1-title{
 	margin-left: 10%;

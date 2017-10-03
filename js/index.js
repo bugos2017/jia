@@ -1,4 +1,21 @@
 var num = 0;
+var isMobile = {  
+    Android: function() {  
+        return navigator.userAgent.match(/Android/i) ? true : false;  
+    },  
+    BlackBerry: function() {  
+        return navigator.userAgent.match(/BlackBerry/i) ? true : false;  
+    },  
+    iOS: function() {  
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i) ? true : false;  
+    },  
+    Windows: function() {  
+        return navigator.userAgent.match(/IEMobile/i) ? true : false;  
+    },  
+    any: function() {  
+        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Windows());  
+    }  
+};  
 function liandong(number) {
 	$("#carousel-example-generic").stop().hide();
 	$("#server").stop().show();
@@ -12,12 +29,17 @@ function liandong(number) {
 	$('.img'+(oldnum+1)).stop().hide();
 	$('.img'+(number+1)).stop().show();
 }
+function show1() {
+	$("#address").html("广州市海珠区宝岗大道中新大厦1408室");
+}
+function show2() {
+	$("#address").html("工厂地址");
+}
 $(function(){
 	var pages = [$("#index"),$("#aboutus"),$("#carousel-example-generic"),$("#server"),$("#anli"),$("#contact")];
 	for (var i = pages.length - 1; i >= 0; i--) {
 		pages[i].stop().hide();
 	}
-	alert(num);
 	pages[0].stop().show();
 	var flag = 0;
 	setInterval(function () {
@@ -30,6 +52,13 @@ $(function(){
 		num = 0;
 		hideNav();
 	});
+
+	if (isMobile.any()) {
+		$(".carousel-inner img:eq(0)").attr('src', 'img/carousel11.png');
+		$(".carousel-inner img:eq(1)").attr('src', 'img/carousel22.png');
+		$(".carousel-inner img:eq(2)").attr('src', 'img/carousel33.png');
+		$("#aboutus").addClass('test');
+	}
 
 	$(".whitepoint>li:eq(0)").addClass('bigpoint');   
 	/*$('.service-body>li').hover(function() {
