@@ -53,11 +53,19 @@ $(function(){
 		hideNav();
 	});
 
+	$(".anli-body>li").slice(2, 8).hide();
+	$("#getmore").click(function(event) {
+		$(".anli-body>li").slice(2, 8).show();
+		$(this).hide();
+	});
+
 	if (isMobile.any()) {
+		alert("hhh");
 		$(".carousel-inner img:eq(0)").attr('src', 'img/carousel11.png');
 		$(".carousel-inner img:eq(1)").attr('src', 'img/carousel22.png');
 		$(".carousel-inner img:eq(2)").attr('src', 'img/carousel33.png');
 		$("#aboutus").addClass('test');
+		$(".abouttext1").css('margin-left', '0');
 	}
 
 	$(".whitepoint>li:eq(0)").addClass('bigpoint');   

@@ -110,12 +110,20 @@ ul{
     justify-content: center; /*定义li的里的元素水平居中*/
 }
 .aboutus{
+	width:100%;
+    height:100%;
 	padding-top: 120px; 
 	background: url('../img/about.png') no-repeat;
-	overflow:hide;
+	background-size:100% 100%;
+	position:absolute;
 }
 .test {
 	background: url('../img/about1.png') no-repeat;
+	width:100%;
+    height:100%;
+    background-size:100% 100%;
+    position:absolute;
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='bg-login.png',sizingMethod='scale');
 }
 .abouttext1{
 	padding-top:15%;
