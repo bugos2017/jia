@@ -30,7 +30,8 @@ ul{
 .logo-bg{
 	position: fixed;
 	width: 100%;
-	background: url('../img/logobg.png') no-repeat;
+	background: url('../img/logobg.png');
+	background-size: 100% auto;
 	height: 70px;
 	z-index: 102;
 	filter: invert(1);
@@ -98,7 +99,7 @@ ul{
 	top: 110px;
 	height: 100%;
 	width: 40px;
-	z-index: 90;
+	z-index: 101;
 }
 .contact>li{
 	height: 29%;

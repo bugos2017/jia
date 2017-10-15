@@ -54,9 +54,17 @@ $(function(){
 	});
 
 	$(".anli-body>li").slice(2, 8).hide();
-	$("#getmore").click(function(event) {
-		$(".anli-body>li").slice(2, 8).show();
-		$(this).hide();
+	$("#getmore").click(function(event){
+		if($(this).text()=="全部展开")
+		{
+			$(".anli-body>li").slice(2, 8).show();
+			$(this).text("取消展开");
+			$(".float-right").css('height','100px');
+		}
+		else{
+			$(".anli-body>li").slice(2, 8).hide();
+			$(this).text("全部展开");
+		}
 	});
 
 	if (isMobile.any()) {
@@ -255,10 +263,12 @@ $(function(){
 		if (num == 0) {
 			$(".logo-bg").css('background', 'rgba(0,0,0,0)');
 			$(".mynav").css('background', 'rgba(0,0,0,0)');
+			$(".nav-border").css('height', '0');
 			$(".realnav>li").removeClass('nav-active');
 		} else {
 			$(".logo-bg").css('background', '');
 			$(".mynav").css('background', '');
+			$(".nav-border").css('height', '8');
 		}
 	}
 
